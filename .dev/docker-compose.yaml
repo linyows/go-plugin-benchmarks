@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    volumes:
+      - ../../benchmark-plugins:/go/src/app
+      - /go/src/app/.dev/
+    tty: true
+    working_dir: /go/src/app
